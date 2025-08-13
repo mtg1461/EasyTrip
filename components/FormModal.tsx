@@ -29,14 +29,15 @@ export default function FormModal({
   setFormData,
   showSuccess,
 }: Props) {
-  if (!open) return null;
-
-  // Close on ESC
+  // Close on ESC (must not call hooks conditionally)
   useEffect(() => {
+    if (!open) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
+  }, [open, onClose]);
+
+  if (!open) return null;
 
   const titleId = "easytrip-dialog-title";
   const descId = "easytrip-dialog-desc";
@@ -63,7 +64,7 @@ export default function FormModal({
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100">
               <Check className="h-6 w-6 text-emerald-700" />
             </div>
-            <h3 className="text-xl font-semibold">You're in!</h3>
+            <h3 className="text-xl font-semibold">You&rsquo;re in!</h3>
             <p className="mt-2 text-slate-600">
               Check your email for your preview link and next steps.
             </p>

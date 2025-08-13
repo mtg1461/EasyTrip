@@ -11,8 +11,8 @@ export default function TestimonialsSection() {
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <p className="text-lg text-slate-700 mb-4 italic">
-              "For the first time, I wasn't texting every five minutes. Our
-              grocery trip was calm."
+              &ldquo;For the first time, I wasn&rsquo;t texting every five
+              minutes. Our grocery trip was calm.&rdquo;
             </p>
             <p className="text-sm text-slate-600">
               — Maya R., caregiver and pilot participant (Seattle)
@@ -21,7 +21,8 @@ export default function TestimonialsSection() {
 
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <p className="text-lg text-slate-700 mb-4 italic">
-              "I could follow the pictures and knew where the quiet spots were."
+              &ldquo;I could follow the pictures and knew where the quiet spots
+              were.&rdquo;
             </p>
             <p className="text-sm text-slate-600">
               — J., autistic adult and pilot participant

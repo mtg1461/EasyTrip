@@ -10,7 +10,7 @@ export default function FinalCTASection({ onCTA }: Props) {
           Ready for calmer, safer trips?
         </h2>
         <p className="text-xl text-slate-700 mb-8">
-          See exactly how the Safety Demo works and what you'll get.
+          See exactly how the Safety Demo works and what you&rsquo;ll get.
         </p>
 
         <button

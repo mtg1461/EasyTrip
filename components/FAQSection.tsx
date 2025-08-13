@@ -52,8 +52,8 @@ export default function FAQSection() {
               Will it work in my city?
             </h3>
             <p className="text-slate-700">
-              We're focused on U.S. metros first. The demo will show current
-              coverage.
+              We&rsquo;re focused on U.S. metros first. The demo will show
+              current coverage.
             </p>
           </div>
 
@@ -70,8 +70,8 @@ export default function FAQSection() {
           <div>
             <h3 className="text-xl font-semibold mb-2">Is Medicaid covered?</h3>
             <p className="text-slate-700">
-              A Medicaid reimbursement pilot pathway is in progress. We'll share
-              updates inside the demo.
+              A Medicaid reimbursement pilot pathway is in progress. We&rsquo;ll
+              share updates inside the demo.
             </p>
           </div>
         </div>

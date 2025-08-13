@@ -1,3 +1,4 @@
+// ./app/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";
@@ -14,6 +15,7 @@ import FormModal from "../components/FormModal";
 export default function HomePage() {
   const [showForm, setShowForm] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+
   type ModalFormData = {
     email: string;
     role?: string;
@@ -30,7 +32,6 @@ export default function HomePage() {
 
   const handleCTAClick = (location: "hero" | "final") => {
     if (typeof window !== "undefined") {
-      // @ts-ignore
       window.dataLayer?.push({ event: "cta_click", location });
     }
     setShowForm(true);
@@ -41,7 +42,6 @@ export default function HomePage() {
 
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
-      // @ts-ignore
       window.dataLayer?.push({
         event: "form_submit",
         role: formData.role,
@@ -65,7 +65,6 @@ export default function HomePage() {
       const max = document.body.scrollHeight - window.innerHeight;
       const pct = (window.scrollY / (max || 1)) * 100;
       if (pct >= 50) {
-        // @ts-ignore
         window.dataLayer?.push({ event: "scroll_depth_50" });
         window.removeEventListener("scroll", onScroll);
       }
